@@ -1,0 +1,14 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: #060d1a;
+  color: #d0e8ff;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  min-height: 100svh;
+}
+
+#root {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 16px;
+}
