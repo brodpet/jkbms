@@ -4,11 +4,9 @@ import mqtt from 'mqtt'
 const BROKER = 'wss://c3d042132d83410eacb912944246d4d7.s1.eu.hivemq.cloud:8884/mqtt'
 const USERNAME = 'brodpet'
 const PASSWORD = 'Brodpet18'
-const PACKS = ['CALB-new314ah', 'CALB-314ah', 'Cornex-280ah']
+const PACKS = ['ED-48V-314AH-15']
 const PACK_LABELS: Record<string, string> = {
-  'CALB-new314ah': 'CALB New 314Ah',
-  'CALB-314ah': 'CALB 314Ah',
-  'Cornex-280ah': 'Cornex 280Ah',
+  'ED-48V-314AH-15': 'ED 48V 314AH -15',
 }
 
 interface PackData {
