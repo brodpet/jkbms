@@ -79,8 +79,8 @@ function TopBar({ status, clock }: { status: ConnState; clock: string }) {
       <div className="brand">
         <div className="logo">JK</div>
         <div className="titles">
-          <div className="name">JK BMS Monitor</div>
-          <div className="sub">Dongjin Solar</div>
+          <div className="name">ED Solar</div>
+          <div className="sub">JK BMS Monitor</div>
         </div>
       </div>
       <div className="topbar-right">
@@ -429,7 +429,7 @@ export default function App() {
           color={eta?.color}
           delta={
             eta && !isNaN(eta.hours)
-              ? `@ ${fmt(Math.abs(totalCurrent), 1)} A · ${fmt(eta.ah, 0)} Ah`
+              ? `${totalPower > 0 ? '+' : ''}${fmt(totalPower, 0)} W`
               : 'idle · no current'
           }
           accent={eta?.color ?? 'var(--blue)'}
