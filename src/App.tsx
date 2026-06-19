@@ -60,8 +60,8 @@ function etaFor(soc: number, current: number): { hours: number; mode: 'charge' |
     const ah = (NOMINAL_AH * (100 - soc)) / 100
     return { hours: ah / absI, mode: 'charge', label: 'Est. to Full', color: 'var(--green)', ah }
   }
-  const ah = (NOMINAL_AH * soc) / 100
-  return { hours: ah / absI, mode: 'discharge', label: 'Est. to Empty', color: 'var(--amber)', ah }
+  const ah = Math.max(0, (NOMINAL_AH * (soc - 20)) / 100)
+  return { hours: ah / absI, mode: 'discharge', label: 'Est. to Discharge', color: 'var(--amber)', ah }
 }
 
 /* ---------- top bar ---------- */
