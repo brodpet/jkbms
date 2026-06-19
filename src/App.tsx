@@ -470,6 +470,24 @@ export default function App() {
         </div>
       </div>
 
+      <div className="card" style={{ overflow: 'hidden', padding: 0 }}>
+        <video
+          src="/baby-dance.mp4"
+          autoPlay
+          loop
+          muted
+          playsInline
+          style={{
+            width: '100%',
+            display: 'block',
+            objectFit: 'cover',
+            objectPosition: 'center top',
+            maxHeight: '80vh',
+            clipPath: 'inset(0 0 8% 0)',
+          }}
+        />
+      </div>
+
       <div className="footer">JK BMS MONITOR · LIVE MQTT · UPDATES EVERY 10s</div>
     </div>
   )
